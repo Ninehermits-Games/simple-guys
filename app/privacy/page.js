@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar';
 export default function page() {
   return (
     <div>
-        {/* <NavBar /> */}
+        <h1>PRIVACY POLICY</h1>
     </div>
   )
 }
