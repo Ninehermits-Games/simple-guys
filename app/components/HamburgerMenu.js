@@ -1,7 +1,7 @@
-export default function HamburgerMenu() {
+export default function HamburgerMenu( {onClick} ) {
   return (
     <div className="absolute top-9">
-      <button className="absolute w-[60px] h-[53px] flex items-center justify-center group pb-2 cursor-pointer">
+      <button onClick={onClick} className="absolute w-[60px] h-[53px] flex items-center justify-center group pb-2 cursor-pointer">
         {/* Outer button stroke/border */}
         <div className="absolute inset-0 border-[12px] border-[#298282] rounded-[10px]"></div>
 
