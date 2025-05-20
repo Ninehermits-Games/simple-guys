@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 // import { Noto_Sans_Symbols } from "next/font/google";
-import BackAndNextButtons from "../components/BackAndNextButtons";
-import WhitePaperButton from "../components/WhitePaperButton";
+import BackAndNextButtons2 from "../components/BackAndNextButtons2";
+import MintNowButton from "../components/MintNowButton";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -25,7 +25,7 @@ export default function page() {
         >
           <div>
             <span>
-              <img src="/aboutImage.svg" width={500} />
+              <img src="/aboutNftImage.svg" width={500} />
             </span>
           </div>
           <div className="w-[50%]">
@@ -36,7 +36,7 @@ export default function page() {
                 // textShadow: '0 0 0 2px black'
               }}
             >
-              ABOUT US
+              ABOUT NFT
             </h1>
             <p
               className="text-[20px] font-semibold text-white mt-2"
@@ -45,21 +45,20 @@ export default function page() {
                 // textShadow: '0 0 0 2px black'
               }}
             >
-              We are simple guys in Simple world, we do simple
-              <br /> things, create simple projects. You guys are
-              <br /> simple guys too, we are all simple. Understand
-              <br /> simply, hold NFT simply, receive big airdrop simply.
-              <br />
-              Finally we will have a simple life.
+              Total supply of 10,000 unique Simple Guys NFTs.<br /> Including 10 1/1
+              NFTs, 2,000 UR NFTs, 7,990 common<br /> NFTs. The rarer the NFT, the
+              more $SIMG points you<br /> get.<br /> 5,000 NFT items with rarity in order
+              White - Green<br /> - Purple - Orange Red. The items will buff and<br />
+              increase % $SIMG Points.
             </p>
             <div className="w-full flex mt-8 -ml-2">
-                <WhitePaperButton />
+              <MintNowButton />
             </div>
           </div>
         </div>
 
         <div>
-          <BackAndNextButtons />
+          <BackAndNextButtons2 />
         </div>
       </div>
     </>
