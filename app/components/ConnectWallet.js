@@ -4,12 +4,12 @@ const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
 });
 
-export default function ConnectWallet() {
+export default function ConnectWallet({ onClick }) {
   return (
     <>
       <div className={`${Bango.className}`}>
         <div className="absolute top-8.5 right-16 border-t-[6.2059px] border-l-[6.2059px] border-r-[6.2059px] border-b-[11px] border-[#1F6C81] rounded-[31.719px]">
-          <button className="flex items-center justify-center px-4 py-1 bg-[#8BEAFF] text-white font-bold text-md rounded-[31.719px] cursor-pointer">
+          <button onClick={onClick} className="flex items-center justify-center px-4 py-1 bg-[#8BEAFF] text-white font-bold text-md rounded-[31.719px] cursor-pointer">
             {/* Wallet Icon */}
             <div className="mb-0.5">
               <img

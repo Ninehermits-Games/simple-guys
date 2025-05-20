@@ -15,18 +15,18 @@ export default function HamburgerDropDown() {
           <div className="flex justify-between space-x-14">
             <div className="space-y-4 mt-20">
               <h1
-                className="text-[40px] font-normal cursor-pointer hover:text-[#FFAE00] transition-colors"
+                className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
                 style={{
-                  WebkitTextStroke: "3px black",
+                  WebkitTextStroke: "1.5px black",
                   // textShadow: '0 0 0 2px black'
                 }}
               >
                 ABOUT US
               </h1>
               <h1
-                className="text-[40px] font-normal cursor-pointer hover:text-[#FFAE00] transition-colors"
+                className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
                 style={{
-                  WebkitTextStroke: "3px black",
+                  WebkitTextStroke: "1.5px black",
                   // textShadow: '0 0 0 2px black'
                 }}
               >
@@ -35,18 +35,18 @@ export default function HamburgerDropDown() {
             </div>
             <div className="space-y-4 mt-20">
               <h1
-                className="text-[40px] font-normal cursor-pointer hover:text-[#FFAE00] transition-colors"
+                className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
                 style={{
-                  WebkitTextStroke: "3px black",
+                  WebkitTextStroke: "1.5px black",
                   // textShadow: '0 0 0 2px black'
                 }}
               >
                 SIMPLE CITY
               </h1>
               <h1
-                className="text-[40px] font-normal cursor-pointer hover:text-[#FFAE00] transition-colors"
+                className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
                 style={{
-                  WebkitTextStroke: "3px black",
+                  WebkitTextStroke: "1.5px black",
                   // textShadow: '0 0 0 2px black'
                 }}
               >
