@@ -20,26 +20,46 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
       </div>
-      {/* <div className="fixed inset-0 w-full -z-10 overflow-hidden">
-        <video autoPlay loop muted playsInline className="w-full">
-          <source src="/boy3.mov" type="video/mov" />
+      <div className="fixed top-[195px] left-[645px] min-h-screen w-[345px]">
+        <video autoPlay loop muted playsInline>
+          <source src="/boy5.webm" type="video/webm"/>
           Your browser does not support the video tag.
         </video>
+      </div>
+      {/* <div className="-z-40">
+        <span className="fixed top-[210px] left-[660px] min-h-screen w-full bg-cover bg-no-repeat">
+          <img src="/boyImage.svg" width={300} />
+        </span>
       </div> */}
       <div className="flex w-full flex-1 flex-col items-center justify-center">
         <div className="flex items-center justify-center">
           <img
             src="/sgLargeLogo.svg"
-            alt="Logo" 
-            width={700}
+            alt="Logo"
+            width={750}
             // height={200}
             // priority
           />
         </div>
       </div>
-      <span className="fixed top-[360px] left-[1050px] min-h-screen w-full bg-cover bg-no-repeat -z-40">
-        <img src="/dog.svg"/>
-      </span>
+      <div className="-z-40">
+        <span className="fixed top-[415px] left-[1080px] min-h-screen w-full bg-cover bg-no-repeat">
+          <img src="/dog.svg" width={230} />
+        </span>
+      </div>
+
+      <div className="-mt-3">
+        <div className={`${Bango.className}`}>
+          <div className="flex flex-row items justify-center space-x-[205px]">
+            <div className="w-auto flex left-135">
+              <MintNowMainButton />
+            </div>
+            <div className="w-auto flex left-135">
+              <AboutUsMainButton />
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* <div
         className="absolute top-0 min-h-screen w-full bg-cover  bg-no-repeat -z-50"
