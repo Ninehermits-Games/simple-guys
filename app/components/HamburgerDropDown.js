@@ -31,6 +31,9 @@ export default function HamburgerDropDown() {
               </h1>
               <h1
                 className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
+                onClick={() => {
+                  window.location = "/storePage1";
+                }}
                 style={{
                   WebkitTextStroke: "1.5px black",
                   // textShadow: '0 0 0 2px black'
@@ -52,7 +55,7 @@ export default function HamburgerDropDown() {
               <h1
                 className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
                 onClick={() => {
-                  window.location = "/storePage1";
+                  window.location = "/storePage2";
                 }}
                 style={{
                   WebkitTextStroke: "1.5px black",
