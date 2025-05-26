@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { useRouter } from "next/navigation";
 // import { Noto_Sans_Symbols } from "next/font/google";
 
 const Bango = localFont({
@@ -6,6 +7,8 @@ const Bango = localFont({
 });
 
 export default function HamburgerDropDown() {
+  const router = useRouter();
+
   return (
     <>
       <div
@@ -16,6 +19,9 @@ export default function HamburgerDropDown() {
             <div className="space-y-4 mt-20">
               <h1
                 className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
+                onClick={() => {
+                  window.location = "/aboutUs";
+                }}
                 style={{
                   WebkitTextStroke: "1.5px black",
                   // textShadow: '0 0 0 2px black'
@@ -45,6 +51,9 @@ export default function HamburgerDropDown() {
               </h1>
               <h1
                 className="text-[40px] font-semibold cursor-pointer hover:text-[#FFAE00] transition-colors"
+                onClick={() => {
+                  window.location = "/storePage1";
+                }}
                 style={{
                   WebkitTextStroke: "1.5px black",
                   // textShadow: '0 0 0 2px black'
@@ -103,9 +112,23 @@ export default function HamburgerDropDown() {
           </div>
         </div>
         <div className="flex space-x-10 text-sm font-normal">
-          <div>Privacy Policy</div>
-          <div>Terms of Use</div>
-          <div>White Paper</div>
+          <div
+            onClick={() => {
+              window.location = "/privacy";
+            }}
+            className="cursor-pointer"
+          >
+            Privacy Policy
+          </div>
+          <div
+            onClick={() => {
+              window.location = "/terms";
+            }}
+            className="cursor-pointer"
+          >
+            Terms of Use
+          </div>
+          <div className="cursor-pointer">White Paper</div>
         </div>
       </div>
     </>

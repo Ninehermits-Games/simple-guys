@@ -24,7 +24,7 @@ export default function NavBar() {
   };
 
   return (
-    <>
+    <div className="absolute top-0 left-0 w-full z-50">
       <header className="bg-[#3B5B6E] opacity-[86%] rounded-[81px] mt-7 w-[95%] mx-auto py-4 px-8">
         <HamburgerMenu onClick={toggleDropdown} isActive={activeMenu === "dropdown"} />
         <div className="flex justify-center">
@@ -50,6 +50,6 @@ export default function NavBar() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
