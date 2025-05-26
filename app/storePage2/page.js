@@ -163,6 +163,12 @@ export default function Page() {
               </div>
             </div>
 
+            <div className="absolute top-[45%] left-[30%]">
+              <span className="cursor-pointer">
+                <img src="/sp2ArrowImg.svg" width={35} />
+              </span>
+            </div>
+
             {/* Center Panel - Construction Site */}
             <div className="flex-1 max-w-lg mx-auto">
               {/* <div className="bg-[#9A8D87] rounded-2xl p-8 border-[10px] border-black aspect-square flex items-center justify-center"> */}
@@ -228,6 +234,12 @@ export default function Page() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="absolute top-[45%] right-[4.7%]">
+              <span className="cursor-pointer">
+                <img src="/sp2ArrowImg2.svg" width={35} />
+              </span>
             </div>
           </div>
         </div>
