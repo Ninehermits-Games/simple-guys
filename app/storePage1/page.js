@@ -53,12 +53,12 @@ export default function page() {
   return (
     <>
       <div
-        className="absolute top-0 min-h-screen w-full bg-cover bg-center bg-no-repeat -z-50"
+        className="absolute top-0 left-0 min-h-screen w-full bg-cover bg-center bg-no-repeat -z-50 flex items-center justify-center"
         style={{
           backgroundImage: "url('/background2.svg')",
         }}
       >
-        <div className={`${Bango.className} min-h-screen pt-[110px]`}>
+        <div className={`${Bango.className} w-full max-w-full px-0 pt-[30px]`}>
           {/* Product Cards Container */}
           <div className="flex justify-center gap-14">
             {/* Mystery Box Card */}
