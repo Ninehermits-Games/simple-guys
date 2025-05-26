@@ -1,4 +1,7 @@
+"use client";
+
 import localFont from "next/font/local";
+import { useRouter } from "next/navigation";
 // import { Noto_Sans_Symbols } from "next/font/google";
 
 const Bango = localFont({
@@ -10,9 +13,13 @@ const NotoSansRegular = localFont({
 });
 
 export default function BackAndNextButtons() {
+  const router = useRouter();
+
   return (
     <>
-      <div className={`absolute flex space-x-4 bottom-[90px] right-[100px] ${Bango.className}`}>
+      <div
+        className={`absolute flex space-x-4 bottom-[90px] right-[100px] ${Bango.className}`}
+      >
         {/* <button className="cursor-pointer"> */}
         {/* <span>
             <img src="/backbg.svg" width={95} />
@@ -28,7 +35,7 @@ export default function BackAndNextButtons() {
           </button>
         </div> */}
         <div className="inline-block">
-          <button className="relative focus:outline-none cursor-pointer">
+          <button className="relative focus:outline-none cursor-not-allowed">
             <svg
               width="130"
               //   height="0"
@@ -61,7 +68,12 @@ export default function BackAndNextButtons() {
           </span>
         </button> */}
         <div className="inline-block">
-          <button className="relative focus:outline-none cursor-pointer">
+          <button
+            onClick={() => {
+              window.location = "/aboutNFT";
+            }}
+            className="relative focus:outline-none cursor-pointer"
+          >
             <svg
               width="130"
               //   height="0"

@@ -12,7 +12,7 @@ const NotoSansRegular = localFont({
 export default function page() {
   return (
     <>
-      <div className="mt-14">
+      <div className="mt-30">
         <h1
           className={`text-center text-[80px] font-normal text-white tracking-wide ${Bango.className}`}
           style={{

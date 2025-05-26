@@ -1,5 +1,8 @@
+"use client";
+
 import localFont from "next/font/local";
-// import { Noto_Sans_Symbols } from "next/font/google";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -10,32 +13,68 @@ const NotoSansRegular = localFont({
 });
 
 export default function BackAndNextButtons2() {
+  const router = useRouter();
+  const [currentPage, setCurrentPage] = useState("");
+
+  // Define the navigation flow
+  const pageFlow = {
+    next: {
+      "aboutNFT": "aboutAirdrop",
+      "aboutAirdrop": "simplePlay", 
+      "simplePlay": "roadmaps",
+      "roadmaps": null // No next page after roadmaps
+    },
+    back: {
+      "aboutNFT": "aboutUs",
+      "aboutAirdrop": "aboutNFT",
+      "simplePlay": "aboutAirdrop",
+      "roadmaps": "simplePlay"
+    }
+  };
+
+  // Get current page from window location
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    if (pathname) {
+      // Extract page name from pathname (e.g., "/aboutNFT" -> "aboutNFT")
+      const pageName = pathname.replace("/", "");
+      setCurrentPage(pageName);
+    }
+  }, []);
+
+  const handleNext = () => {
+    const nextPage = pageFlow.next[currentPage];
+    if (nextPage) {
+      window.location = `/${nextPage}`;
+    }
+  };
+
+  const handleBack = () => {
+    const backPage = pageFlow.back[currentPage];
+    if (backPage) {
+      window.location = `/${backPage}`;
+    }
+  };
+
+  // Check if buttons should be disabled
+  const isNextDisabled = !pageFlow.next[currentPage];
+  const isBackDisabled = !pageFlow.back[currentPage];
+
   return (
     <>
       <div className={`absolute flex space-x-4 bottom-[90px] right-[100px] ${Bango.className}`}>
-        {/* <button className="cursor-pointer"> */}
-        {/* <span>
-            <img src="/backbg.svg" width={95} />
-          </span> */}
-        {/* <div className="inline-block">
-          <button
-            className="bg-[#7B7B7B] text-white font-normal tracking-widest py-4 pr-4 pl-7 flex items-center justify-center rounded-lg"
-            style={{
-              clipPath: "polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 0 50%)",
-            }}
-          >
-            <span className="text-2xl">BACK</span>
-          </button>
-        </div> */}
+        {/* Back Button */}
         <div className="inline-block">
-          <button className="relative focus:outline-none cursor-pointer">
+          <button 
+            className={`relative focus:outline-none ${isBackDisabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
+            onClick={handleBack}
+            disabled={isBackDisabled}
+          >
             <svg
               width="130"
-              //   height="0"
               viewBox="0 0 100 50"
               className="fill-[#B34E3C] rounded-lg"
             >
-              {/* Path with clearly rounded corners at all 5 points */}
               <path
                 d="M30 0 
                    C25 0, 22 3, 20 7
@@ -55,20 +94,19 @@ export default function BackAndNextButtons2() {
             </span>
           </button>
         </div>
-        {/* <button className="cursor-pointer">
-          <span>
-            <img src="/nextbg.svg" width={95} />
-          </span>
-        </button> */}
+
+        {/* Next Button */}
         <div className="inline-block">
-          <button className="relative focus:outline-none cursor-pointer">
+          <button 
+            className={`relative focus:outline-none ${isNextDisabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
+            onClick={handleNext}
+            disabled={isNextDisabled}
+          >
             <svg
               width="130"
-              //   height="0"
               viewBox="60 0 100 50"
               className="fill-[#69B9A9] rounded-lg"
             >
-              {/* Path with clearly rounded corners at all 5 points */}
               <path
                 d="M10 0 
                C5 0, 0 5, 0 10
