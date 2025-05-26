@@ -54,7 +54,7 @@ export default function Footer() {
         : 'mt-14 mb-5 mx-auto'}
     `
     : `
-      bg-[#000000] opacity-[74%] text-white font-[16px] 
+      bg-[#000000] opacity-[74%] text-white font-[16px] fixed bottom-0 left-0 right-0 
       text-center py-3 px-40 rounded-[56px] w-[45%] mt-14 mb-5 mx-auto
       ${InterRegular.className}
     `;
