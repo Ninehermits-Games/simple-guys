@@ -13,46 +13,19 @@ const Bango = localFont({
 });
 
 export default function Page() {
-  // const [farmingSpeed, setFarmingSpeed] = useState(3);
-  // const [profitPerHour, setProfitPerHour] = useState(3);
-  // const [miniStoreItems, setMiniStoreItems] = useState([
-  //   { id: 1, purchased: false },
-  //   { id: 2, purchased: false },
-  //   { id: 3, purchased: false },
-  //   { id: 4, purchased: false },
-  // ]);
-
-  // const handleAddItem = () => {
-  //   const nextAvailable = miniStoreItems.find((item) => !item.purchased);
-  //   if (nextAvailable) {
-  //     setMiniStoreItems((prev) =>
-  //       prev.map((item) =>
-  //         item.id === nextAvailable.id ? { ...item, purchased: true } : item
-  //       )
-  //     );
-  //   }
-  // };
-
   return (
     <>
       <div
-        className="absolute top-0 min-h-screen w-full bg-cover bg-center bg-no-repeat -z-50"
+        className="fixed top-0 left-0 min-h-screen w-full bg-cover bg-center bg-no-repeat -z-50"
         style={{
           backgroundImage: "url('/background3.svg')",
         }}
       >
-        <div className={`${Bango.className} min-h-screen p-4 pt-[130px]`}>
-          {/* Header */}
-          {/* <div className="flex justify-between items-center mb-6 mt-4">
-            <button className="bg-gray-600 hover:bg-gray-500 px-4 py-2 rounded-full text-white font-bold border-2 border-gray-400">
-              PROFILE
-            </button>
-          </div> */}
-
-          {/* Main Content */}
-          <div className="flex flex-col lg:flex-row gap-6 w-[89%] mx-auto">
+        <div className={`${Bango.className} min-h-screen flex items-center justify-center p-4`}>
+          {/* Main Content Container */}
+          <div className="flex flex-col lg:flex-row gap-6 w-full max-w-[1300px] items-center justify-center">
             {/* Left Panel - Simple Guys */}
-            <div className="flex flex-col max-w-md items-center">
+            <div className="flex flex-col max-w-md items-center relative">
               {/* Logo */}
               <div className="mb-1">
                 <span>
@@ -100,20 +73,9 @@ export default function Page() {
                     FARMING SPEED
                   </div>
                   <div className="flex justify-center">
-                    {/* {[...Array(farmingSpeed)].map((_, i) => ( */}
-                    <div
-                      // key={i}
-                      className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"
-                    ></div>
-                    <div
-                      // key={i}
-                      className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"
-                    ></div>
-                    <div
-                      // key={i}
-                      className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"
-                    ></div>
-                    {/* ))} */}
+                    <div className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"></div>
+                    <div className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"></div>
+                    <div className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"></div>
                   </div>
                 </div>
                 <div className="bg-[#7D7D7D] rounded-3xl py-4 px-3 text-center border-8 border-[#AFAFAF]">
@@ -126,39 +88,11 @@ export default function Page() {
                     PROFIT PER HOUR
                   </div>
                   <div className="flex justify-center">
-                    {/* {[...Array(farmingSpeed)].map((_, i) => ( */}
-                    <div
-                      // key={i}
-                      className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"
-                    ></div>
-                    <div
-                      // key={i}
-                      className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"
-                    ></div>
-                    <div
-                      // key={i}
-                      className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"
-                    ></div>
-                    {/* ))} */}
+                    <div className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"></div>
+                    <div className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"></div>
+                    <div className="w-3 h-3 bg-white rounded-full mx-[1px] border-3 border-black"></div>
                   </div>
                 </div>
-                {/* <div className="bg-[#7D7D7D] rounded-3xl py-4 px-16 mb-4 border-8 border-[#AFAFAF]">
-                  <div className="">
-                    <div className="bg-gray-700 rounded-lg p-3 text-center">
-                      <div className="text-white text-sm mb-1">
-                        PROFIT PER HOUR
-                      </div>
-                      <div className="flex justify-center">
-                        {[...Array(profitPerHour)].map((_, i) => (
-                          <div
-                            key={i}
-                            className="w-2 h-2 bg-white rounded-full mx-1"
-                          ></div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
 
               {/* Task Panel */}
@@ -172,22 +106,22 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="absolute top-[45%] left-[30%]">
-              <span className="cursor-pointer">
-                <Image
-                  src="/sp2ArrowImg.svg"
-                  width={35}
-                  height={35}
-                  alt="Arrow Left"
-                />
-              </span>
+              {/* Left Arrow - positioned relative to left panel */}
+              <div className="absolute -right-13 top-1/2 transform -translate-y-1/2 hidden lg:block">
+                <span className="cursor-pointer">
+                  <Image
+                    src="/sp2ArrowImg.svg"
+                    width={35}
+                    height={35}
+                    alt="Arrow Left"
+                  />
+                </span>
+              </div>
             </div>
 
             {/* Center Panel - Construction Site */}
-            <div className="flex-1 max-w-lg mx-auto">
-              {/* <div className="bg-[#9A8D87] rounded-2xl p-8 border-[10px] border-black aspect-square flex items-center justify-center"> */}
+            <div className="flex-1 max-w-lg mx-auto flex items-center justify-center">
               <span>
                 <Image
                   src="/sp2Img4.svg"
@@ -196,11 +130,10 @@ export default function Page() {
                   alt="Construction Site"
                 />
               </span>
-              {/* </div> */}
             </div>
 
             {/* Right Panel - Mini Store & Controls */}
-            <div className="flex-1 max-w-md -mt-3">
+            <div className="flex flex-col max-w-md relative">
               {/* Mini Store Header */}
               <div className="flex flex-row items-center justify-between mb-2">
                 <div className="">
@@ -220,7 +153,7 @@ export default function Page() {
               </div>
 
               {/* Mini Store Grid */}
-              <div className="bg-[#29455E] rounded-3xl p-4 mb-6 border-8 border-black">
+              <div className="bg-[#29455E] rounded-3xl p-4 mb-3 border-8 border-black">
                 <div className="flex flex-row gap-3">
                   <span className="cursor-pointer">
                     <Image
@@ -249,14 +182,6 @@ export default function Page() {
                     </span>
                   </div>
                 </div>
-
-                {/* Add Button */}
-                {/* <button
-                  onClick={handleAddItem}
-                  className="w-full bg-gray-500 hover:bg-gray-400 rounded-lg py-3 border-2 border-gray-400 flex items-center justify-center"
-                >
-                  <div className="text-3xl text-gray-300">+</div>
-                </button> */}
               </div>
 
               {/* Control Buttons */}
@@ -270,17 +195,18 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="absolute top-[45%] right-[4.7%]">
-              <span className="cursor-pointer">
-                <Image
-                  src="/sp2ArrowImg2.svg"
-                  width={35}
-                  height={35}
-                  alt="Arrow Right"
-                />
-              </span>
+              {/* Right Arrow - positioned relative to right panel */}
+              <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 hidden lg:block">
+                <span className="cursor-pointer">
+                  <Image
+                    src="/sp2ArrowImg2.svg"
+                    width={35}
+                    height={35}
+                    alt="Arrow Right"
+                  />
+                </span>
+              </div>
             </div>
           </div>
         </div>
