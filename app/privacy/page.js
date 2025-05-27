@@ -1,5 +1,7 @@
+"use client";
+import { useEffect } from "react";
 import localFont from "next/font/local";
-// import { Noto_Sans_Symbols } from "next/font/google";
+import Image from "next/image";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -148,8 +150,9 @@ export default function page() {
             </p>
           </div>
           <div className="mt-8">
+            {" "}
             <h1 className={`text-black text-[30px] ${Bango.className}`}>
-              7. Children's Privacy
+              7. Children&apos;s Privacy
             </h1>
             <p
               className={`text-black text-[24px] ${NotoSansRegular.className}`}
@@ -171,15 +174,11 @@ export default function page() {
             <ul
               className={`list-disc pl-10 space-y-3 text-black text-[24px] leading-snug ${NotoSansRegular.className}`}
             >
-              <li>
-                Request access to data we store related to your wallet.
-              </li>
+              <li>Request access to data we store related to your wallet.</li>
               <li>
                 Request deletion of your optional contact information (email).
               </li>
-              <li>
-                Disconnect your wallet from our platform at any time.
-              </li>
+              <li>Disconnect your wallet from our platform at any time.</li>
             </ul>
           </div>
           <div className="mt-8">
@@ -204,28 +203,20 @@ export default function page() {
               contact us at:
             </p>
             <div className="mt-4 flex items-center space-x-4">
-            <img
-              src="/email.svg"
-              alt="SimpleGuys Logo"
-              width={40}
-            />
-            <p
-              className={`text-black text-[24px] ${NotoSansRegular.className}`}
-            >
-              Email: team@simpleguys.xyz
-            </p>
+              <Image src="/email.svg" alt="Email" width={40} height={40} />
+              <p
+                className={`text-black text-[24px] ${NotoSansRegular.className}`}
+              >
+                Email: team@simpleguys.xyz
+              </p>
             </div>
             <div className="mt-4 flex items-center space-x-4">
-            <img
-              src="/web.svg"
-              alt="SimpleGuys Logo"
-              width={40}
-            />
-            <p
-              className={`text-black text-[24px] ${NotoSansRegular.className}`}
-            >
-              Website: https://simpleguys.xyz
-            </p>
+              <Image src="/web.svg" alt="Website" width={40} height={40} />
+              <p
+                className={`text-black text-[24px] ${NotoSansRegular.className}`}
+              >
+                Website: https://simpleguys.xyz
+              </p>
             </div>
           </div>
         </div>

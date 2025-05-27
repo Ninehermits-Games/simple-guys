@@ -6,6 +6,7 @@ import TaskButton from "../components/TaskButton";
 import ProfileButton from "../components/ProfileButton";
 import BoostButton from "../components/BoostButton";
 import ShareButton from "../components/ShareButton";
+import Image from "next/image";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -55,7 +56,12 @@ export default function Page() {
               {/* Logo */}
               <div className="mb-1">
                 <span>
-                  <img src="/sp2Img1.2.svg" width={280} />
+                  <Image
+                    src="/sp2Img1.2.svg"
+                    width={280}
+                    height={280}
+                    alt="Simple Guys Logo"
+                  />
                 </span>
               </div>
 
@@ -64,7 +70,12 @@ export default function Page() {
                 <div className="flex items-center justify-center">
                   <div>
                     <span>
-                      <img src="/sp2Img2.svg" width={50} />
+                      <Image
+                        src="/sp2Img2.svg"
+                        width={50}
+                        height={50}
+                        alt="Stats"
+                      />
                     </span>
                   </div>
                   <div className="flex ml-9 mt-5">
@@ -154,7 +165,7 @@ export default function Page() {
               <div className="mt-4">
                 <div className="flex items-center space-x-2">
                   <span className="ml-3">
-                    <img src="/sp2Img3.svg" width={75} />
+                    <Image src="/sp2Img3.svg" width={75} height={75} alt="Tasks" />
                   </span>
                   <div className="">
                     <TaskButton />
@@ -165,7 +176,12 @@ export default function Page() {
 
             <div className="absolute top-[45%] left-[30%]">
               <span className="cursor-pointer">
-                <img src="/sp2ArrowImg.svg" width={35} />
+                <Image
+                  src="/sp2ArrowImg.svg"
+                  width={35}
+                  height={35}
+                  alt="Arrow Left"
+                />
               </span>
             </div>
 
@@ -173,7 +189,12 @@ export default function Page() {
             <div className="flex-1 max-w-lg mx-auto">
               {/* <div className="bg-[#9A8D87] rounded-2xl p-8 border-[10px] border-black aspect-square flex items-center justify-center"> */}
               <span>
-                <img src="/sp2Img4.svg" width={470} />
+                <Image
+                  src="/sp2Img4.svg"
+                  width={470}
+                  height={470}
+                  alt="Construction Site"
+                />
               </span>
               {/* </div> */}
             </div>
@@ -202,14 +223,29 @@ export default function Page() {
               <div className="bg-[#29455E] rounded-3xl p-4 mb-6 border-8 border-black">
                 <div className="flex flex-row gap-3">
                   <span className="cursor-pointer">
-                    <img src="/sp2AddImg.svg" width={335} />
+                    <Image
+                      src="/sp2AddImg.svg"
+                      width={335}
+                      height={335}
+                      alt="Add Item"
+                    />
                   </span>
                   <div className="flex flex-col items-center justify-between">
                     <span className="cursor-pointer">
-                      <img src="/sp2AddImg2.svg" />
+                      <Image
+                        src="/sp2AddImg2.svg"
+                        width={160}
+                        height={160}
+                        alt="Add Item 1"
+                      />
                     </span>
                     <span className="cursor-pointer">
-                      <img src="/sp2AddImg2.svg" />
+                      <Image
+                        src="/sp2AddImg2.svg"
+                        width={160}
+                        height={160}
+                        alt="Add Item 2"
+                      />
                     </span>
                   </div>
                 </div>
@@ -238,7 +274,12 @@ export default function Page() {
 
             <div className="absolute top-[45%] right-[4.7%]">
               <span className="cursor-pointer">
-                <img src="/sp2ArrowImg2.svg" width={35} />
+                <Image
+                  src="/sp2ArrowImg2.svg"
+                  width={35}
+                  height={35}
+                  alt="Arrow Right"
+                />
               </span>
             </div>
           </div>

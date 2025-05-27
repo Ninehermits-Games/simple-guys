@@ -1,4 +1,7 @@
+"use client";
+import { useEffect } from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 import BackAndNextButtons2 from "../components/BackAndNextButtons2";
 import TokenomicButton from "../components/TokenomicButton";
 
@@ -13,10 +16,13 @@ export default function Page() {
       style={{ backgroundImage: "url('/background1.svg')" }}
     >
       {/* RIGHT-FIXED IMAGE */}
-      <img
+      <Image
         src="/aboutAirdropImage2.svg"
         alt="Airdrop"
-        className="absolute top-0 right-0 w-auto h-[100vh] max-w-[50vw] object-contain z-0"
+        width={800}
+        height={1080}
+        className="absolute top-0 right-0 h-[100vh] max-w-[50vw] object-contain z-0"
+        priority
       />
 
       {/* TEXT LEFT + BUTTON */}

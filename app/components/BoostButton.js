@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -15,7 +16,7 @@ export default function BoostButton({ onClick }) {
           >
             <div className="flex flex-row items-center space-x-1">
               <span className="mt-2 -ml-3">
-                <img src="/sp2Img5.svg" width={40} />
+                <Image src="/sp2Img5.svg" width={40} height={40} alt="Boost" />
               </span>
               <h1
                 className="text-[#7D7D7D] text-[30px] font-semibold"

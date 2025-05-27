@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -13,11 +14,9 @@ export default function ShareButton({ onClick }) {
             onClick={onClick}
             className="px-10 pt-2 pb-2 bg-[#7D7D7D] text-white font-bold rounded-[45px] cursor-pointer"
           >
-            {/* <div> */}
-              <span>
-                <img src="/sp2Img6.svg" width={35} />
-              </span>
-            {/* </div> */}
+            <span>
+              <Image src="/sp2Img6.svg" width={35} height={35} alt="Share" />
+            </span>
           </button>
         </div>
       </div>

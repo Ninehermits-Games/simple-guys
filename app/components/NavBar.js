@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import HamburgerMenu from "./HamburgerMenu";
 import HamburgerDropDown from "./HamburgerDropDown";
 import ConnectWallet from "./ConnectWallet";
@@ -33,10 +34,12 @@ export default function NavBar() {
           isActive={activeMenu === "dropdown"}
         />
         <div className="flex justify-center">
-          <img
+          <Image
             src="/mainlogo.svg"
             alt="SimpleGuys Logo"
-            className="w-[180px] cursor-pointer"
+            width={180}
+            height={45}
+            className="cursor-pointer"
             onClick={() => {
               window.location = "/";
             }}

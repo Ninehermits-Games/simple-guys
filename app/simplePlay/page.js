@@ -1,5 +1,7 @@
+"use client";
+import { useEffect } from "react";
 import localFont from "next/font/local";
-// import { Noto_Sans_Symbols } from "next/font/google";
+import Image from "next/image";
 import BackAndNextButtons2 from "../components/BackAndNextButtons2";
 
 const Bango = localFont({
@@ -32,7 +34,12 @@ export default function page() {
           <div className="flex items-center justify-center space-x-6 flex-wrap">
             {/* 1st image + label */}
             <div className="flex flex-col items-center">
-              <img src="/smNewImg1.svg" width={200} alt="sp1" />
+              <Image
+                src="/smNewImg1.svg"
+                width={200}
+                height={200}
+                alt="Get NFT"
+              />
               <p
                 className="text-[25px] font-semibold text-white text-center"
                 style={{ WebkitTextStroke: "1px black" }}
@@ -42,11 +49,21 @@ export default function page() {
             </div>
 
             {/* Arrow */}
-            <img src="/greenArrowNew.svg" width={50} alt="arrow" />
+            <Image
+              src="/greenArrowNew.svg"
+              width={50}
+              height={50}
+              alt="Arrow"
+            />
 
             {/* 2nd image + label */}
             <div className="flex flex-col items-center">
-              <img src="/smNewImg2.svg" width={200} alt="sp2" />
+              <Image
+                src="/smNewImg2.svg"
+                width={200}
+                height={200}
+                alt="Put into simple game"
+              />
               <p
                 className="text-[25px] font-semibold text-white text-center"
                 style={{ WebkitTextStroke: "1px black" }}
@@ -57,11 +74,21 @@ export default function page() {
             </div>
 
             {/* Arrow */}
-            <img src="/greenArrowNew.svg" width={50} alt="arrow" />
+            <Image
+              src="/greenArrowNew.svg"
+              width={50}
+              height={50}
+              alt="Arrow"
+            />
 
             {/* 3rd image + label */}
             <div className="flex flex-col items-center">
-              <img src="/smNewImg3.svg" width={200} alt="sp3" />
+              <Image
+                src="/smNewImg3.svg"
+                width={200}
+                height={200}
+                alt="Get high score"
+              />
               <p
                 className="text-[25px] font-semibold text-white text-center"
                 style={{ WebkitTextStroke: "1px black" }}
@@ -72,11 +99,21 @@ export default function page() {
             </div>
 
             {/* Arrow */}
-            <img src="/greenArrowNew.svg" width={50} alt="arrow" />
+            <Image
+              src="/greenArrowNew.svg"
+              width={50}
+              height={50}
+              alt="Arrow"
+            />
 
             {/* 4th image + label */}
             <div className="flex flex-col items-center">
-              <img src="/smNewImg4.svg" width={200} alt="sp4" />
+              <Image
+                src="/smNewImg4.svg"
+                width={200}
+                height={200}
+                alt="Get $SIMG airdrop"
+              />
               <p
                 className="text-[25px] font-semibold text-white text-center"
                 style={{ WebkitTextStroke: "1px black" }}

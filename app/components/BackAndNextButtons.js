@@ -1,8 +1,8 @@
 "use client";
 
 import localFont from "next/font/local";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-// import { Noto_Sans_Symbols } from "next/font/google";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -62,9 +62,8 @@ export default function BackAndNextButtons() {
             </span>
           </button>
         </div>
-        {/* <button className="cursor-pointer">
-          <span>
-            <img src="/nextbg.svg" width={95} />
+        {/* <button className="cursor-pointer">          <span>
+            <Image src="/nextbg.svg" width={95} height={95} alt="Next" />
           </span>
         </button> */}
         <div className="inline-block">
