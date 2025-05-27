@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 // import { Noto_Sans_Symbols } from "next/font/google";
 
@@ -72,7 +73,12 @@ export default function HamburgerDropDown() {
               <div className="bg-[#D3D3D3] py-2 px-1 rounded-2xl border-4 border-[#000000]">
                 <div className="flex items-center justify-center w-22 h-13 bg-black rounded-lg transition-colors cursor-pointer border-2 border-[#000000]">
                   <span className="text-black font-bold">
-                    <img src="/twitter.svg" width={45} />
+                    <Image
+                      src="/twitter.svg"
+                      width={45}
+                      height={45}
+                      alt="Twitter"
+                    />
                   </span>
                 </div>
                 <div className="text-xs text-black mt-1 text-center">
@@ -82,7 +88,12 @@ export default function HamburgerDropDown() {
               <div className="bg-[#D3D3D3] py-2 px-1 rounded-2xl border-4 border-[#000000]">
                 <div className="flex items-center justify-center w-22 h-13 bg-white rounded-lg transition-colors cursor-pointer border-2 border-[#000000]">
                   <span className="text-black font-bold">
-                    <img src="/ins.svg" width={40} />
+                    <Image
+                      src="/ins.svg"
+                      width={40}
+                      height={40}
+                      alt="Instagram"
+                    />
                   </span>
                 </div>
                 <div className="text-xs text-black mt-1 text-center">
@@ -94,7 +105,12 @@ export default function HamburgerDropDown() {
               <div className="bg-[#D3D3D3] py-2 px-1 rounded-2xl border-4 border-[#000000]">
                 <div className="flex items-center justify-center w-22 h-13 bg-[#7289DA] rounded-lg transition-colors cursor-pointer border-2 border-[#000000]">
                   <span className="text-black font-bold">
-                    <img src="/discord.svg" width={45} />
+                    <Image
+                      src="/discord.svg"
+                      width={45}
+                      height={45}
+                      alt="Discord"
+                    />
                   </span>
                 </div>
                 <div className="text-xs text-black mt-1 text-center">
@@ -104,7 +120,7 @@ export default function HamburgerDropDown() {
               <div className="bg-[#D3D3D3] py-2 px-1 rounded-2xl border-4 border-[#000000]">
                 <div className="flex items-center justify-center w-22 h-13 bg-white rounded-lg transition-colors cursor-pointer border-2 border-[#000000]">
                   <span className="text-black font-bold">
-                    <img src="/yt.svg" width={50} />
+                    <Image src="/yt.svg" width={50} height={50} alt="YouTube" />
                   </span>
                 </div>
                 <div className="text-xs text-black mt-1 text-center">

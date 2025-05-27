@@ -1,5 +1,7 @@
+"use client";
+import { useEffect } from "react";
 import localFont from "next/font/local";
-// import { Noto_Sans_Symbols } from "next/font/google";
+import Image from "next/image";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -214,7 +216,7 @@ export default function page() {
               contact us at:
             </p>
             <div className="mt-4 flex items-center space-x-4">
-              <img src="/email.svg" alt="SimpleGuys Logo" width={40} />
+              <Image src="/email.svg" alt="Email" width={40} height={40} />
               <p
                 className={`text-black text-[24px] ${NotoSansRegular.className}`}
               >
@@ -222,7 +224,7 @@ export default function page() {
               </p>
             </div>
             <div className="mt-4 flex items-center space-x-4">
-              <img src="/web.svg" alt="SimpleGuys Logo" width={40} />
+              <Image src="/web.svg" alt="Website" width={40} height={40} />
               <p
                 className={`text-black text-[24px] ${NotoSansRegular.className}`}
               >

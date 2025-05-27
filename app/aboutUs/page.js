@@ -1,5 +1,7 @@
+"use client";
+import { useEffect } from "react";
 import localFont from "next/font/local";
-// import { Noto_Sans_Symbols } from "next/font/google";
+import Image from "next/image";
 import BackAndNextButtons from "../components/BackAndNextButtons";
 import WhitePaperButton from "../components/WhitePaperButton";
 
@@ -23,7 +25,12 @@ export default function page() {
             className={`flex flex-row items-center justify-center space-x-10 w-[80%] mx-auto ${Bango.className}`}
           >
             <div>
-              <img src="/aboutImage.svg" width={500} />
+              <Image
+                src="/aboutImage.svg"
+                width={500}
+                height={500}
+                alt="About Us"
+              />
             </div>
             <div className="w-[50%]">
               <h1

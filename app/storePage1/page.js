@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 import MintNowStoreButton from "../components/MintNowStoreButton";
 import StorePage1BottomPannel from "../components/StorePage1BottomPannel";
 
@@ -21,7 +22,7 @@ const SyneRegular = localFont({
   src: "../fonts/Syne-Regular.ttf",
 });
 
-export default function page() {
+export default function Page() {
   const [mysteryBoxQuantity, setMysteryBoxQuantity] = useState(2);
   const [itemCapsuleQuantity, setItemCapsuleQuantity] = useState(2);
   const pricePerItem = 10; // Example price in USDT
@@ -78,7 +79,12 @@ export default function page() {
                   <div className="flex gap-8 items-center">
                     {/* Left Side - Mystery Box Image */}
                     <span>
-                      <img src="/spImg1.svg" width={330} />
+                      <Image
+                        src="/spImg1.svg"
+                        width={330}
+                        height={330}
+                        alt="Mystery Box"
+                      />
                     </span>
 
                     {/* Right Side - Details */}
@@ -186,7 +192,12 @@ export default function page() {
                   <div className="flex gap-8 items-center">
                     {/* Left Side - Mystery Box Image */}
                     <span>
-                      <img src="/spImg2.svg" width={330} />
+                      <Image
+                        src="/spImg2.svg"
+                        width={330}
+                        height={330}
+                        alt="Item Capsule"
+                      />
                     </span>
 
                     {/* Right Side - Details */}

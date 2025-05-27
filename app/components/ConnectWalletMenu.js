@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-// import { Noto_Sans_Symbols } from "next/font/google";
+import Image from "next/image";
 
 const Bango = localFont({
   src: "../fonts/SVN-Bango.otf",
@@ -24,7 +24,12 @@ export default function ConnectWalletMenu({ onClose }) {
           </h2>
           <button onClick={onClose} className="absolute right-5 cursor-pointer">
             <span>
-              <img src="/closebutton.svg" width={55} />
+              <Image
+                src="/closebutton.svg"
+                width={55}
+                height={55}
+                alt="Close"
+              />
             </span>
           </button>
         </div>
@@ -36,7 +41,12 @@ export default function ConnectWalletMenu({ onClose }) {
             <span className="tracking-wider font-normal">PHANTOM</span>
             <div>
               <span>
-                <img src="/phantom.svg" width={55} />
+                <Image
+                  src="/phantom.svg"
+                  width={55}
+                  height={55}
+                  alt="Phantom Wallet"
+                />
               </span>
             </div>
           </button>
@@ -46,7 +56,12 @@ export default function ConnectWalletMenu({ onClose }) {
             <span className="tracking-wider font-normal">TRUST WALLET</span>
             <div>
               <span>
-                <img src="/trust.svg" width={55} />
+                <Image
+                  src="/trust.svg"
+                  width={55}
+                  height={55}
+                  alt="Trust Wallet"
+                />
               </span>
             </div>
           </button>
@@ -56,7 +71,12 @@ export default function ConnectWalletMenu({ onClose }) {
             <span className="tracking-wider font-normal">COINBASE</span>
             <div>
               <span>
-                <img src="/coinbase.svg" width={55} />
+                <Image
+                  src="/coinbase.svg"
+                  width={55}
+                  height={55}
+                  alt="Coinbase Wallet"
+                />
               </span>
             </div>
           </button>
@@ -66,7 +86,12 @@ export default function ConnectWalletMenu({ onClose }) {
             <span className="tracking-wider font-normal">META MASK</span>
             <div>
               <span>
-                <img src="/metamask.svg" width={55} />
+                <Image
+                  src="/metamask.svg"
+                  width={55}
+                  height={55}
+                  alt="Meta Mask"
+                />
               </span>
             </div>
           </button>
@@ -76,7 +101,12 @@ export default function ConnectWalletMenu({ onClose }) {
             <span className="tracking-wider font-normal">KEPLR</span>
             <div>
               <span>
-                <img src="/keplr.svg" width={55} />
+                <Image
+                  src="/keplr.svg"
+                  width={55}
+                  height={55}
+                  alt="Keplr Wallet"
+                />
               </span>
             </div>
           </button>
